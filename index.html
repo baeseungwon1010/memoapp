@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>메모 개인정보처리방침</title>
+<style>
+  :root { --bg:#ffffff; --fg:#1a1a1a; --muted:#5f6368; --line:#e4e4e7; --accent:#3d5afe; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#121212; --fg:#ececec; --muted:#a0a4a8; --line:#33363b; --accent:#8c9eff; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.7 system-ui,-apple-system,"Noto Sans KR",sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:26px; margin:0 0 4px; }
+  h2 { font-size:19px; margin:32px 0 8px; padding-top:16px; border-top:1px solid var(--line); }
+  p, li { color:var(--fg); }
+  .muted { color:var(--muted); font-size:14px; }
+  table { width:100%; border-collapse:collapse; font-size:15px; }
+  th, td { text-align:left; vertical-align:top; padding:8px; border-bottom:1px solid var(--line); }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>메모 개인정보처리방침</h1>
+<p class="muted">시행일: 2026년 10월 16일 · 앱: 메모 (com.memoapp.app)</p>
+
+<p>메모(이하 "앱")는 손글씨 메모 앱입니다. 앱은 회원가입이나 로그인이 없고, 광고가 없으며,
+개발자가 운영하는 서버로 사용자의 메모나 개인정보를 보내지 않습니다. 아래는 앱이 다루는 정보와 처리 방식입니다.</p>
+
+<h2>1. 기기 안에만 저장되는 정보</h2>
+<p>다음 정보는 사용자의 기기 안 앱 전용 저장 공간에만 저장되며, 개발자에게 전송되지 않습니다.</p>
+<ul>
+  <li><b>메모 내용</b>: 손글씨, 텍스트, 체크리스트, 태그, 폴더, 넣은 사진, 가져온 문서의 페이지 이미지</li>
+  <li><b>음성 메모</b>: 사용자가 녹음 버튼을 눌렀을 때만 마이크로 녹음하며, 녹음 파일은 해당 메모 안에만 저장됩니다.</li>
+  <li><b>앱 설정</b>: 펜 종류·색·굵기, 화면 설정 등</li>
+</ul>
+<p>앱을 삭제하면 이 정보도 함께 삭제됩니다. 휴지통으로 옮긴 메모는 30일 후 자동으로 영구 삭제됩니다.</p>
+
+<h2>2. 권한</h2>
+<table>
+  <tr><th>권한</th><th>사용 목적</th></tr>
+  <tr><td>마이크 (RECORD_AUDIO)</td><td>음성 메모 녹음. 사용자가 녹음을 시작할 때만 사용하며, 앱 화면을 벗어나면 녹음을 멈춥니다.</td></tr>
+  <tr><td>인터넷</td><td>아래 4번의 문서 변환과 5번의 손글씨 인식 모델 내려받기(둘 다 선택 기능)에 사용합니다.</td></tr>
+  <tr><td>생체 인식·화면 잠금</td><td>비밀 메모를 열 때 기기의 화면 잠금(지문·얼굴·PIN 등)으로 본인 확인. 확인은 안드로이드 시스템이 처리하며, 앱은 지문·얼굴 정보를 받거나 저장하지 않습니다.</td></tr>
+</table>
+<p>사진·문서는 안드로이드 시스템의 파일 선택 화면으로 사용자가 직접 고른 파일만 읽습니다.</p>
+
+<h2>3. 백업</h2>
+<ul>
+  <li><b>앱 안의 "백업 만들기"</b>: 사용자가 고른 위치에 메모 전체를 zip 파일로 저장합니다. 이 파일은 암호화되지 않으므로 보관 위치에 주의해 주세요.</li>
+  <li><b>안드로이드 자동 백업</b>: 기기 설정에서 Google 백업이 켜져 있으면, 안드로이드가 앱 데이터를 사용자의 Google 계정에 백업할 수 있습니다(Google 정책 적용). 아래 4번의 API 키는 백업에서 제외됩니다.</li>
+</ul>
+
+<h2>4. 외부 서비스로 전송되는 정보 (선택 기능)</h2>
+<p>DOCX(워드) 문서를 가져오는 기능은 사용자가 직접 발급한 <a href="https://cloudconvert.com">CloudConvert</a> API 키를 설정에 입력한 경우에만 동작합니다.
+이 경우 사용자가 고른 DOCX 파일이 PDF 변환을 위해 HTTPS로 CloudConvert 서버에 업로드되고, 변환된 PDF를 내려받습니다.
+전송된 파일은 CloudConvert의 <a href="https://cloudconvert.com/privacy">개인정보처리방침</a>에 따라 처리됩니다.
+API 키는 기기 안에만 저장되고 개발자에게 전송되지 않습니다. PDF·PPT·PPTX·HWP·HWPX 파일은 외부로 보내지 않고 기기 안에서 변환합니다.</p>
+
+<h2>5. 손글씨 검색 (선택 기능)</h2>
+<p>설정에서 "손글씨 검색"을 켜면 Google의 <a href="https://developers.google.com/ml-kit">ML Kit</a> 손글씨 인식 모델을 한 번 내려받고,
+펜으로 쓴 필기를 <b>기기 안에서</b> 글자로 인식해 검색에 사용합니다. 필기 내용과 인식된 글자는 기기 밖으로 보내지 않습니다.</p>
+<p>다만 ML Kit은 기능 개선과 오류 진단을 위해 다음 정보를 HTTPS로 Google에 보냅니다:
+기기 정보(제조사, 모델, OS 버전), 앱 패키지 이름과 버전, 사용자나 기기를 식별하기 위한 것이 아닌 설치별 식별자,
+성능 수치(처리 시간 등), 기능 설정(인식 언어), 입력·출력 크기, 기능 사용·모델 내려받기 등의 이벤트와 오류 코드.
+자세한 내용은 <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit 데이터 공개</a>와
+<a href="https://policies.google.com/privacy">Google 개인정보처리방침</a>을 참고하세요. 손글씨 검색을 끄면 인식해 둔 글자와 모델을 지웁니다.</p>
+
+<h2>6. 제3자 제공·광고·추적</h2>
+<p>앱은 사용자의 정보를 판매하거나 제3자에게 제공하지 않으며, 광고 식별자나 위치 정보를 사용하지 않습니다.</p>
+
+<h2>7. 아동</h2>
+<p>앱은 13세 미만 아동을 대상으로 하지 않으며, 아동의 개인정보를 의도적으로 수집하지 않습니다.</p>
+
+<h2>8. 변경</h2>
+<p>이 방침이 바뀌면 이 페이지에 시행일과 함께 게시합니다.</p>
+
+<h2>9. 문의</h2>
+<p>개발자: proto_parse<br>이메일: <a href="mailto:dchtxigx@gmail.com">dchtxigx@gmail.com</a></p>
+</main>
+</body>
+</html>
